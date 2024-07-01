@@ -89,7 +89,7 @@ RUN cp /tmp/mytile/docker/init.sh /tmp/init.sh
 ENV CFLAGS "${CFLAGS} -Wno-error=noexcept-type -Wno-error=deprecated-declarations"
 ENV CXXFLAGS "${CXXFLAGS} -Wno-error=noexcept-type -Wno-error=deprecated-declarations"
 
-RUN wget https://downloads.mariadb.org/interstitial/${MARIADB_VERSION}/source/${MARIADB_VERSION}.tar.gz \
+RUN wget https://archive.mariadb.org//${MARIADB_VERSION}/source/${MARIADB_VERSION}.tar.gz \
   && tar xf ${MARIADB_VERSION}.tar.gz \
   && mv /tmp/mytile ${MARIADB_VERSION}/storage/mytile \
   && cd ${MARIADB_VERSION} \
