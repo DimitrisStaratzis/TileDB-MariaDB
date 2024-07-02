@@ -18,8 +18,10 @@ jobs:
         configuration:
           - dockerfile: "Dockerfile"
             repository: "tiledb/tiledb-mariadb"
-          - dockerfile: "Dockerfile-R"
-            repository: "tiledb/tiledb-mariadb-r"
+          - dockerfile: "Dockerfile-min"
+            repository: "tiledb/tiledb-mariadb-min"
+          - dockerfile: "Dockerfile-server"
+            repository: "tiledb/tiledb-mariadb-server"
     steps:
       - uses: actions/checkout@v4
       - name: Build and push develop
